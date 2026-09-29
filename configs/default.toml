@@ -1,0 +1,38 @@
+[data]
+source = "synthetic"
+seed = 7
+n_days = 2520
+n_leaders = 24
+n_planted = 10
+
+[walk_forward]
+formation = 504
+step = 126
+max_pairs = 10
+top_k = 60
+n_factors = 3
+fdr = 0.20
+hl_min = 2.0
+hl_max = 60.0
+max_reuse = 2
+
+[costs]
+cost_bps = 8.0
+borrow_bps = 50.0
+
+[portfolio]
+gross_leverage = 2.0
+# vol_target = 0.10
+vol_halflife = 30.0
+max_leverage = 4.0
+
+[strategy]
+entry_mode = "bertram"   # "bertram" | "fixed"
+z_entry = 2.0            # only used when entry_mode = "fixed"
+z_exit = 0.25
+z_stop = 4.0
+gate_in = 0.6
+gate_out = 0.3
+max_hold_hl = 4.0
+prob_sizing = true
+execution_lag = 1
